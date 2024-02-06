@@ -1,7 +1,7 @@
 // variables to allow frameworks
 const inquirer = require('inquirer');
-// const generateSVG = require('./generateSVG');
-// const fs = require ('fs');
+const generateSVG = require('./lib/generateSVG');
+const fs = require ('fs');
 
 // global variables
 const colorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
@@ -15,7 +15,6 @@ const colorKeywords = [
     'pink',
     'black',
     'white',
-    // Add more color keywords here
   ];
 
 //function to only allow particular colors or hexadecimal
@@ -75,13 +74,12 @@ async function createFile() {
 
     inquirer.prompt(questions)
     .then(answers => {
-      console.log('Answers:', answers); error => {
-    //   fs.writeFile("generatedSVG",generateSVG(answers),error => {
+      console.log('Answers:', answers);
+      fs.writeFile("logo.svg",generateSVG(answers),error => {
         if(error) throw (error);
-        console.log('succesfully generated SVG');
-      }
+        console.log('Generated logo.svg');
+      })
     })
-    // })
     .catch(error => {
       console.error('Error:', error);
     });
