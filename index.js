@@ -74,6 +74,7 @@ async function createFile() {
 
     inquirer.prompt(questions)
     .then(answers => {
+      
       console.log('Answers:', answers);
       fs.writeFile("logo.svg",generateSVG(answers),error => {
         if(error) throw (error);
@@ -84,8 +85,6 @@ async function createFile() {
       console.error('Error:', error);
     });
   }
-
+  
   // call to run funtion
   createFile()
-
-  
