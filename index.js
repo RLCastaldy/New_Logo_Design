@@ -50,7 +50,7 @@ const questions = [
     {
         type: 'input',
         name: 'color',
-        message: 'Please enter a color:',
+        message: 'Please enter a text color:',
         validate: validateColor,
       },
 
