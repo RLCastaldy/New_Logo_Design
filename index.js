@@ -25,13 +25,6 @@ function validateColor(color) {
     return 'Please enter a valid color keyword or hexadecimal number.';
   }
 
-  function validateBackground(background) {
-    if (colorRegex.test(background) || colorKeywords.includes(background.toLowerCase())) {
-      return true;
-    }
-    return 'Please enter a valid color keyword or hexadecimal number.';
-  }
-
 //variable to store answers
 const questions = [
     {
@@ -65,7 +58,7 @@ const questions = [
         type: 'input',
         name: 'background',
         message: 'Please enter a background color:',
-        validate: validateBackground,
+        validate: validateColor,
       },
 ];
 
