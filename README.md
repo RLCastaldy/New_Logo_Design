@@ -7,6 +7,10 @@
 
 New Logo Design is designed to quickly generate a professional looking logo with three characters of text.
 
+
+[Untitled_ Feb 8, 2024 9_07 PM.webm](https://github.com/RLCastaldy/New_Logo_Design/assets/140565239/b9a6b173-0554-4c0b-935d-a7199524f850)
+
+
 ## Table of Contents
 
 - [Installation](#installation)
